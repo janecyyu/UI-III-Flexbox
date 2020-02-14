@@ -83,11 +83,12 @@ header {
 
 .navigation{
 	/* height: 80px; */
-	background-color: #fff;
+	/* background-color: #fff; */
 	color: gray;
 	width: 100%;
 	/* border: 1px solid green; */
 	display: flex;
+
 }
 
 .navigation a {
@@ -98,12 +99,21 @@ header {
 	/* vertical-align: top; */
 }
 
+@media screen and (max-width: 768px) {
+	.menu {
+		flex-direction: column;
+	}
+
+	.menu .logo {
+		margin-left: -50px;
+	}
+}
+
 .menu {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-
 }
 
 button{
@@ -144,9 +154,22 @@ button{
 	margin: 30px -8px;
 }
 
+@media screen and (max-width: 768px) {
+	.two_boxes_row {
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+	}
+
+	.two_boxes_row .box {
+		margin: 0px
+	}
+}
+
 .two_boxes_row .box {
 	/* height: 250px; */
-	width: 48%;
+	/* width: 48%; */
+	margin: 10px;
 	border: 1px solid black;
 	box-sizing: border-box;
 	padding: 15px;
@@ -168,9 +191,15 @@ button{
 	justify-content: space-around;
 }
 
+@media screen and (max-width: 768px) {
+	.row {
+		flex-direction: column;
+	}
+}
+
 .row .col {
 	height: 450px;
-	width: 45%;
+	/* width: 45%; */
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -178,6 +207,8 @@ button{
 
 #header_img {
 	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 
@@ -199,10 +230,17 @@ h1 {
 	display: flex;
 }
 
-.top_content .top_content_row {
-	/* display: inline-block; */
-	width: 50%;
+@media screen and (max-width: 768px) {
+	.top_content {
+		flex-direction: column;
+	}
+
+	.top_content .top_content_row {
+		margin-top: 30px;
+	}
+
 }
+
 h3 {
 	font-size: 24px;
 }
@@ -219,15 +257,27 @@ h3 {
 	display: flex;
 }
 
-.bottom_content .three_col {
-	/* display: inline-block; */
-	width: 33.33333%;
+
+@media screen and (max-width: 768px) {
+	.bottom_content {
+		flex-direction: column;
+	}
+	.bottom_content .three_col {
+		margin-top: 30px;
+	}
 }
 
 .contact {
 	/* background-color: red; */
 	margin: 30px 0px;
 	line-height: 20px;;
+}
+
+@media screen and (max-width: 768px) {
+	.buttom {
+		flex-direction: column;
+	}
+
 }
 
 .buttom	{
@@ -239,7 +289,8 @@ h3 {
 .buttom .facts{
 	line-height: 18px;
 	height:350px;
-	width: 45%;
+	flex: 1;
+	/* width: 45%; */
 	/* border: 1px solid blue; */
 }
 
@@ -257,5 +308,49 @@ h3 {
 footer {
 	text-align: center;
 	font-size: 18px;
-	padding: 10px;;
+	padding: 20px;
 }
+
+#vision_h1 {
+	padding: 20px 0px;
+	font-size: 50px;
+	color: rgb(94, 94, 94);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.five_imgs {
+	display: flex;
+	justify-content: space-around;
+}
+.five_imgs .images {
+	height: 200px;
+	width: 18%;
+	/* border: 1px solid red; */
+	background-image: url(https://www.goodfreephotos.com/albums/other-photos/primary-school-pencils-and-apple.jpg);
+}
+
+.five_imgs .images:hover {
+	border: 1px solid white;
+	box-shadow:4px 4px rgba(20%,20%,40%,0.5);
+}
+
+.love {
+	height: 300px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-top: 50px;
+}
+
+.love h2 {
+	font-style: italic;
+	text-align: center;
+	padding: 50px 0 20px 0;
+	line-height: 45px;
+	font-size: 25px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.love p{
+	text-align: center;
+}
+
